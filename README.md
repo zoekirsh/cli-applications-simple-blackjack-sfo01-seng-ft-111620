@@ -12,7 +12,7 @@ hand that is closer to 21 than the dealer's hand without ever exceeding a card
 total of 21.
 
 <p align="center">
-  <img width="500" src="https://curriculum-content.s3.amazonaws.com/cli-applications/simple-blackjack/Image_15_BlackJack.png">
+  <img width="500" src="https://curriculum-content.s3.amazonaws.com/cli-applications/simple-blackjack/Image_15_BlackJack.png" alt="">
 </p>
 
 However, in this simplified version of Blackjack, we'll cut out that "compare
