@@ -55,10 +55,22 @@ end
 def runner
   welcome
   hand = initial_round
-  until hand > 21 do
-    hand = hit?(hand)
-    display_card_total(hand)
+  dealerScore = rand(15..24)
+  newHand = hit?(hand)
+  puts "Your hand is #{newHand}"
+  until newHand > 21 || newHand == hand || dealerScore > 21 
+    hand = newHand
+    newHand = hit?(newHand)
+    puts "Your new hand totals #{newHand}"
   end
-end_game(hand)
+  if dealerScore > 21 
+    puts "The dealer drew #{dealerScore} and lost. You win... this round"
+  elsif newHand > 21 || dealerScore == 21
+    puts "You lose! Suckaaa"
+  elsif newHand > dealerScore
+    puts "WINNER WINNER CHICKEN DINNER $$$"
+  else 
+    puts "You lose. Play again?"
+  end
 end
     
